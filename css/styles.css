@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+    --Very_dark_blue: hsl(233, 47%, 7%);
+    --Dark_desaturated_blue: hsl(244, 38%, 16%);
+    --Soft_violet: hsl(277, 64%, 61%);
+
+    --White: hsl(0, 0%, 100%);
+    --Slightly_transparent_white: hsla(0, 0%, 100%, 0.75);
+    --Slightly_transparent_white: hsla(0, 0%, 100%, 0.6);
+}
+
+/* ----------------------- PRINCIPAL ----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Very_dark_blue);
+}
+
+main {
+    width: 327px;
+    height: 780px;
+    margin: 86px auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: var(--Dark_desaturated_blue);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------------- SECTION 1 -------------------------- */
+
+.section1 {
+    margin-bottom: 40px;
+}
+
+.section1 .image {
+    background-image: url(../images/image-header-mobile.jpg);
+    width: 100%;
+    height: 242px;
+    background-size: cover;
+}
+
+.section1 #layer {
+    background-color: hsla(277, 89%, 29%, 0.699);
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------------- SECTION 2 -------------------------- */
+
+.section2 h1 {
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--White);
+    margin-bottom: 15px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.section2 h1 span {
+    color: var(--Soft_violet);
+}
+
+.section2 > p {
+    color: var(--Slightly_transparent_white);
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 46px;
+    padding: 0 31px;
+}
+
+.section2 #stats {
+    height: 207px;
+    align-items: center;
+}
+
+.section2 .stat {
+    margin-bottom: 36px;
+    text-align: center;
+    height: 45px;
+}
+
+.section2 .stat .cant {
+    font-family: 'Inter', sans-serif;
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.section2 .stat .type {
+    color: var(--Slightly_transparent_white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* ------------------------- FOOTER ---------------------- */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ---------------------- MEDIA QUERY (1440px) -------------------------- */
+
+@media screen and (min-width: 1440px) {
+    main {
+        margin: auto;
+        width: 1112px;
+        height: 446px;
+        margin: 176px auto;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: var(--Dark_desaturated_blue);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    /* --------------------- SECTION 1 ------------------------- */
+
+    .section1 {
+        width: 541px;
+        height: 100%;
+    }
+
+    .section1 .image {
+        background-image: url(../images/image-header-desktop.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 446px;
+    }
+
+    /* --------------------- SECTION 2 ------------------------- */
+    .section2 {
+        width: 573px;
+        padding-top: 79px;
+        padding-left: 75px;
+    }
+
+    .section2 h1,
+    .section2 > p {
+        padding: 0;
+        text-align: start;
+    }
+    .section2 h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        width: 375px;
+        margin-bottom: 2rem;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .section2 > p {
+        font-size: 0.85rem;
+        width: 378px;
+        padding-right: 50px;
+        margin-bottom: 79px;
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .section2 #stats {
+        width: 376px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .section2 .stat {
+        flex-grow: 1;
+    }
+
+    #stats p {
+        text-align: left;
+    }
+
+    .section2 .stat .cant {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+
+    .section2 .stat .type {
+        font-size: 0.7rem;
+    }
+}
